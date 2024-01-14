@@ -2462,11 +2462,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASPNETWebApp\\MobileShop\\MobileShop\\MobileShop.csproj",
+      "projectUniqueName": "D:\\MobileShop\\MobileShop\\MobileShop.csproj",
       "projectName": "MobileShop",
-      "projectPath": "D:\\ASPNETWebApp\\MobileShop\\MobileShop\\MobileShop.csproj",
+      "projectPath": "D:\\MobileShop\\MobileShop\\MobileShop.csproj",
       "packagesPath": "C:\\Users\\MINH\\.nuget\\packages\\",
-      "outputPath": "D:\\ASPNETWebApp\\MobileShop\\MobileShop\\obj\\",
+      "outputPath": "D:\\MobileShop\\MobileShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
