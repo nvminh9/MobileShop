@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MobileShop.Data
 {
+    [Table("SANPHAMs")]
     public class SANPHAM
     {
         [Key]

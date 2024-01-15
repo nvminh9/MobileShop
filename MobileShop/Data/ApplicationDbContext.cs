@@ -18,6 +18,12 @@ namespace MobileShop.Data
         public DbSet<LOAITHANHVIEN> LOAITHANHVIENs { get; set; }
         public DbSet<LOAISANPHAM> LOAISANPHAMs { get; set; }
         public DbSet<KHUYENMAI> KHUYENMAIs {  get; set; }
+        public DbSet<KHACHHANG> KHACHHANGs { get; set; }
+        public DbSet<DONDATHANG> DONDATHANGs { get; set; }
+        public DbSet<CHITIETSANPHAM> CHITIETSANPHAMs { get; set; }
+        public DbSet<CHITIETPHIEUNHAP> CHITIETPHIEUNHAPs { get; set; }
+        public DbSet<CHITIETDONDATHANG> CHITIETDONDATHANGs { get; set; }
+        public DbSet<BINHLUAN> BINHLUANs { get; set; }
         #endregion
 
     }
