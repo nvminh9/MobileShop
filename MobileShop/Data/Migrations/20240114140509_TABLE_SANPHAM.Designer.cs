@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MobileShop.Data;
 
@@ -11,9 +12,10 @@ using MobileShop.Data;
 namespace MobileShop.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240114140509_TABLE_SANPHAM")]
+    partial class TABLE_SANPHAM
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,194 +224,6 @@ namespace MobileShop.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("MobileShop.Data.KHUYENMAI", b =>
-                {
-                    b.Property<int>("MaKhuyenMai")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaKhuyenMai"), 1L, 1);
-
-                    b.Property<float?>("GiamGia")
-                        .HasColumnType("real");
-
-                    b.Property<int?>("MaSP")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("NgayBatDau")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("NgayKetThuc")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("TenKhuyenMai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("MaKhuyenMai");
-
-                    b.ToTable("KHUYENMAIs");
-                });
-
-            modelBuilder.Entity("MobileShop.Data.LOAISANPHAM", b =>
-                {
-                    b.Property<int>("MaLSP")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaLSP"), 1L, 1);
-
-                    b.Property<string>("BiDanh")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TenL")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
-
-                    b.HasKey("MaLSP");
-
-                    b.ToTable("LOAISANPHAMs");
-                });
-
-            modelBuilder.Entity("MobileShop.Data.LOAITHANHVIEN", b =>
-                {
-                    b.Property<int>("MaLTV")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaLTV"), 1L, 1);
-
-                    b.Property<string>("TenLoai")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int?>("UuDai")
-                        .HasColumnType("int");
-
-                    b.HasKey("MaLTV");
-
-                    b.ToTable("LOAITHANHVIENs");
-                });
-
-            modelBuilder.Entity("MobileShop.Data.LOAITHANHVIEN_QUYEN", b =>
-                {
-                    b.Property<int>("MaLTV")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaLTV"), 1L, 1);
-
-                    b.Property<string>("GhiChu")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("MaQuyen")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("MaLTV");
-
-                    b.ToTable("LOAITHANHVIEN_QUYENs");
-                });
-
-            modelBuilder.Entity("MobileShop.Data.NHACUNGCAP", b =>
-                {
-                    b.Property<int>("MaNCC")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaNCC"), 1L, 1);
-
-                    b.Property<string>("DiaChi")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Fax")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("SoDienThoai")
-                        .HasMaxLength(12)
-                        .HasColumnType("nvarchar(12)");
-
-                    b.Property<string>("TenNCC")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("MaNCC");
-
-                    b.ToTable("NHACUNGCAPs");
-                });
-
-            modelBuilder.Entity("MobileShop.Data.NHASANXUAT", b =>
-                {
-                    b.Property<int>("MaNSX")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaNSX"), 1L, 1);
-
-                    b.Property<string>("Lo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TenNSX")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("ThongTin")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("MaNSX");
-
-                    b.ToTable("NHASANXUATs");
-                });
-
-            modelBuilder.Entity("MobileShop.Data.PHIEUNHAP", b =>
-                {
-                    b.Property<int>("MaPN")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaPN"), 1L, 1);
-
-                    b.Property<bool?>("DaXoa")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("MaNCC")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("NgayNhap")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("MaPN");
-
-                    b.ToTable("PHIEUNHAPs");
-                });
-
-            modelBuilder.Entity("MobileShop.Data.QUYEN", b =>
-                {
-                    b.Property<string>("MaQuyen")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("TenQuyen")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("MaQuyen");
-
-                    b.ToTable("QUYENs");
                 });
 
             modelBuilder.Entity("MobileShop.Data.SANPHAM", b =>

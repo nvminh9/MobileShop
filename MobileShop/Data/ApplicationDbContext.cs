@@ -9,6 +9,15 @@ namespace MobileShop.Data
 
         #region DbSet
         public DbSet<THANHVIEN> THANHVIENs { get; set; }
+        public DbSet<SANPHAM> SANPHAMs { get; set; }
+        public DbSet<QUYEN> QUYENs { get; set; }
+        public DbSet<PHIEUNHAP> PHIEUNHAPs { get;set; }
+        public DbSet<NHASANXUAT> NHASANXUATs { get; set; }
+        public DbSet<NHACUNGCAP> NHACUNGCAPs { get; set; }
+        public DbSet<LOAITHANHVIEN_QUYEN> LOAITHANHVIEN_QUYENs { get; set; }
+        public DbSet<LOAITHANHVIEN> LOAITHANHVIENs { get; set; }
+        public DbSet<LOAISANPHAM> LOAISANPHAMs { get; set; }
+        public DbSet<KHUYENMAI> KHUYENMAIs {  get; set; }
         #endregion
 
     }
